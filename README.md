@@ -83,8 +83,9 @@ src/
 - npm o yarn
 - Cuenta en Supabase
 
-### Paso 1: Clonar o descargar el proyecto
+### Paso 1: Clonar el repositorio
 ```bash
+git clone https://github.com/3p3r4lt4/proyecto_final_react_mastery.git
 cd proyecto_final_react_mastery
 ```
 
@@ -95,7 +96,12 @@ npm install
 
 ### Paso 3: Configurar variables de entorno
 
-Crear archivo `.env` en la raíz del proyecto:
+Copiar el archivo de ejemplo y configurar:
+```bash
+cp .env.example .env
+```
+
+Editar `.env` con tus credenciales de Supabase:
 ```env
 VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
 VITE_SUPABASE_ANON_KEY=tu-anon-key-aqui
@@ -116,7 +122,7 @@ La aplicación estará disponible en: `http://localhost:5173`
 
 1. Ir a [supabase.com](https://supabase.com)
 2. Crear nuevo proyecto
-3. Copiar URL y Anon Key desde Settings > API
+3. Copiar URL y Anon Key desde **Settings > API**
 
 ### 2. Configurar autenticación
 
@@ -125,6 +131,23 @@ En el dashboard de Supabase:
 1. Ir a **Authentication** > **Providers**
 2. Habilitar **Email**
 3. (Opcional) Desactivar "Confirm email" para desarrollo rápido
+
+---
+
+## 🔒 Variables de Entorno
+
+| Archivo | ¿Se sube a GitHub? | Descripción |
+|---------|-------------------|-------------|
+| `.env` | ❌ NO | Contiene credenciales reales |
+| `.env.example` | ✅ SÍ | Plantilla sin credenciales |
+
+### Archivo `.env.example`
+```env
+# Supabase Configuration
+# Copia este archivo a .env y completa con tus credenciales
+VITE_SUPABASE_URL=tu_supabase_url_aqui
+VITE_SUPABASE_ANON_KEY=tu_anon_key_aqui
+```
 
 ---
 
@@ -181,20 +204,6 @@ Editar variables CSS en `src/styles/index.css`:
   --success: #10b981;        /* Verde para éxito */
   --danger: #ef4444;         /* Rojo para errores */
   --warning: #f59e0b;        /* Amarillo para alertas */
-}
-```
-
-### Cambiar fuente
-
-En `index.html`, modificar el link de Google Fonts:
-```html
-<link href="https://fonts.googleapis.com/css2?family=TU-FUENTE&display=swap" rel="stylesheet">
-```
-
-Y en CSS:
-```css
-:root {
-  --font-sans: 'TU-FUENTE', sans-serif;
 }
 ```
 
@@ -266,12 +275,14 @@ Y en CSS:
 npm install @supabase/supabase-js
 ```
 
+### Error: "Faltan variables de entorno de Supabase"
+- Verificar que existe el archivo `.env`
+- Verificar que las variables tienen el prefijo `VITE_`
+- Reiniciar el servidor de desarrollo
+
 ### Productos no se guardan
 - Verificar que LocalStorage no esté bloqueado
 - Limpiar caché del navegador
-
-### Estilos no cargan
-- Verificar import en `App.jsx`: `import './styles/index.css'`
 
 ---
 
@@ -279,7 +290,7 @@ npm install @supabase/supabase-js
 
 **Eduardo Peralta**
 
-- GitHub: [@eduardo7sistemas](https://github.com/eduardo7sistemas)
+- GitHub: [@3p3r4lt4](https://github.com/3p3r4lt4)
 - Email: eduardo7sistemas@gmail.com
 
 ---
