@@ -6,8 +6,7 @@
 import { createClient } from '@supabase/supabase-js'
 
 // Variables de entorno - En producción usar .env
-// const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://hamlvnwkdblualoynhre.supabase.co'
-// const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhhbWx2bndrZGJsdWFsb3luaHJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkyNjM1MzcsImV4cCI6MjA4NDgzOTUzN30.__r5ZwxW12bGEybHLxt6LxJUyHcASSJMVVeNu0DA-UY'
+
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
